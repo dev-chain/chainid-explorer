@@ -1,26 +1,27 @@
-MultiChain Explorer
+ChainID Explorer
 ===================
 
-MultiChain Explorer is a free block chain browser for [MultiChain](http://www.multichain.com/) blockchains.
+ChainID Explorer is a free block chain browser for [ChainID](http://www.chainid.io) blockchains.
 
-https://github.com/MultiChain/multichain-explorer
+https://github.com/dev-chain/chainid-explorer
 
+     Copyright(C) 2015,2016,2017,2018 by ChainID.
     Copyright(C) 2015,2016,2017 by Coin Sciences Ltd.
     Copyright(C) 2011,2012,2013 by Abe developers.
     License: GNU Affero General Public License, see the file LICENSE.txt.
     Portions Copyright (c) 2010 Gavin Andresen, see bct-LICENSE.txt.
 
 
-Welcome to MultiChain Explorer!
+Welcome to ChainID Explorer!
 ===============================
 
-This software reads the MultiChain block file, transforms and loads the
+This software reads the ChainID block file, transforms and loads the
 data into a database, and presents a web interface similar to that
-popularized by Bitcoin block explorers like http://blockexplorer.com/.
+popularized by Bitcoin block explorers like https://explorer.chainid.io
 
-MultiChain Explorer is a fork of the popular [Abe](https://github.com/bitcoin-abe/bitcoin-abe) project to add support for MultiChain blockchains with assets and permissions.  MultiChain nodes must be online for all explorer functions to work.
+ChainID Explorer is a fork of the popular [Abe](https://github.com/bitcoin-abe/bitcoin-abe) project to add support for ChainID blockchains with assets and permissions.  ChainID nodes must be online for all explorer functions to work.
 
-MultiChain Explorer is still under development, so things may break or change!
+ChainID Explorer is still under development, so things may break or change!
 
 
 System Requirements
@@ -47,12 +48,12 @@ On CentOS, you will need to install the following dependencies:
     sudo pip install pycrypto
 
 
-MultiChain Compatibility
+ChainID Compatibility
 ------------------------
 
 The explorer currently supports MultiChain 1.0.x versions (since 1.0 alpha 29) and protocol versions up to `10009`, which is the default for MultiChain 1.0.x. You can check the protocol version of an existing chain using the `getinfo` command.
 
-**Note that this Explorer does not yet support MultiChain 2.0 preview releases.**
+**Note that this Explorer does not yet support ChainID 2.0 preview releases.**
 
 Installation
 ------------
@@ -73,10 +74,10 @@ The explorer needs to connect to a local MultiChain node.  Before configuring th
 Create and launch a MultiChain Blockchain
 -----------------------------------------
 
-If you do not yet have a chain you want to explore, [Download MultiChain](http://www.multichain.com/download-install/) to install MultiChain and create a chain named ````chain1```` as follows:
+If you do not yet have a chain you want to explore, [Download ChainID](https://www.ChainID.io/download/) to install ChainID and create a chain named ````chain1```` as follows:
 
-    multichain-util create chain1
-    multichaind chain1 -daemon
+    ChainID-util create chain1
+    ChainIDC chain1 -daemon
 
 By default the [runtime parameter](http://www.multichain.com/developers/runtime-parameters/) ````txindex```` is enabled so that the node keeps track of all transactions across the blockchain, and not just those for the node's wallet. This is required for the explorer to work correctly.
 
@@ -85,7 +86,7 @@ The explorer supports viewing streams which the node has subscribed to.  Launch 
 _The rest of this document assumes your blockchain is named ````chain1````. If not, please substitute accordingly._
 
 
-Configure MultiChain.conf
+Configure ChainID.conf
 -------------------------
 
 The explorer needs to communicate with the blockchain using JSON-RPC.  When you created the blockchain, the JSON-RPC connection details were automatically created by MultiChain and stored in a file named ````multichain.conf````.
